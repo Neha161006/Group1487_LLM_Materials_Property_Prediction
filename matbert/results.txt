@@ -1,1 +1,54 @@
+MatBERT Training on JARVIS-DFT
 
+Dataset:
+JARVIS-DFT
+Total materials: 75,990
+
+Data Split:
+Training: 60,792
+Validation: 7,599
+Testing: 7,599
+
+Model:
+MatBERT (alan-yahya/MatBERT)
+
+Training:
+GPU: NVIDIA Tesla T4
+Epochs: 3
+Input: Material formula
+Task: Multi-task property prediction
+
+Predicted Properties:
+1. Formation Energy - Regression
+2. Energy Above Hull - Regression
+3. Density - Regression
+4. Is Stable - Classification
+5. Band Gap - Regression
+
+Test Results:
+
+Formation Energy:
+MAE: 0.2544
+RMSE: 0.3960
+R²: 0.8641
+
+Energy Above Hull:
+MAE: 0.1499
+RMSE: 0.2986
+R²: 0.4996
+
+Density:
+MAE: 0.6762
+RMSE: 1.0191
+R²: 0.8984
+
+Band Gap:
+MAE: 0.3918
+RMSE: 0.7465
+R²: 0.6880
+
+Is Stable:
+Accuracy: 0.7665
+Precision: 0.6439
+Recall: 0.5697
+F1 Score: 0.6045
